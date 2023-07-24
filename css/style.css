@@ -1,0 +1,17 @@
+body{
+    background-color: rgb(215, 219, 214);
+}
+
+.green-div{
+    width: 100%;
+    min-height: 170px;
+    background-color: rgb(0, 150, 136);
+    position: absolute;
+}
+
+.container{
+    height: 800px;
+    position: relative;
+    top: 40px;
+    background-image: url(../immagini/mine.jpg);
+}
