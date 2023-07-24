@@ -101,12 +101,19 @@ main{
 
 .mine-mex{
     background-color: rgb(213, 249, 186);
-    padding: 1rem 7rem 1rem 1rem;
+    padding: .7rem 5rem .7rem 1rem;
     border-radius: 1rem;
+    align-self: end;
+    margin-bottom: 1rem;
 }
+
 
 .dest-mex{
     background-color: white;
-    padding: 1rem 15rem 1rem 1rem;
+    padding: .7rem 11rem .7rem 1rem;
     border-radius: 1rem;
+    align-self: start;
+    margin-bottom: 1rem;  
 }
+
+
