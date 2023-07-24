@@ -1,3 +1,7 @@
+:root{
+    --bar-color: rgb(234, 234, 234);
+}
+
 body{
     background-color: rgb(215, 219, 214);
 }
@@ -10,8 +14,62 @@ body{
 }
 
 .container{
-    height: 800px;
     position: relative;
     top: 40px;
     background-image: url(../immagini/mine.jpg);
+    display: flex;
+    height: 100vh;
+}
+
+
+.contact-container{ 
+    width: 40%;    
+}
+
+.message-container{
+    width: 60%;
+}
+
+
+.global-user{
+    display: inline-block;
+    width: 60px;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+}
+
+.icon i{
+    color: rgb(167, 165, 165);
+    font-size: 1.5rem;
+    padding: .5rem;
+}
+
+.top-bar{
+    background-color: var(--bar-color);
+}
+
+.blu-bar{
+    background-color: rgb(142, 218, 252);
+}
+
+.blu-bar i{
+    color: rgb(142, 218, 252);
+    background-color: white;
+    font-size: 1.4rem;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    line-height: 120%;
+}
+
+.main-not{
+    font-size: 1.2rem;
+    color: black;
+}
+
+.alt-not{
+    font-size: .9rem;
+}
+
+.alt-not a {
+    color: grey;
 }
