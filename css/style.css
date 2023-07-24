@@ -4,6 +4,7 @@
 
 body{
     background-color: rgb(215, 219, 214);
+    overflow: hidden;
 }
 
 .green-div{
@@ -21,6 +22,10 @@ body{
     height: 100vh;
 }
 
+.contact-list{
+    height: 75vh;
+    overflow: auto;
+}
 
 .contact-container{ 
     width: 40%;    
