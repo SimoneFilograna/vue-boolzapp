@@ -36,11 +36,17 @@ body{
 }
 
 
+
 .global-user{
     display: inline-block;
     width: 60px;
     aspect-ratio: 1/1;
     border-radius: 50%;
+}
+
+.owner-bar,
+.sing-user{
+    min-height: 100px;
 }
 
 .icon i{
@@ -49,12 +55,13 @@ body{
     padding: .5rem;
 }
 
-.top-bar{
+.color-top-bar{
     background-color: var(--bar-color);
 }
 
 .blu-bar{
     background-color: rgb(142, 218, 252);
+    min-height: 100px;
 }
 
 .blu-bar i{
@@ -77,4 +84,8 @@ body{
 
 .alt-not a {
     color: grey;
+}
+
+.last-mex{
+    color: rgb(187, 191, 196);
 }
