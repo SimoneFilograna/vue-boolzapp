@@ -62,20 +62,20 @@
                         </div>
                     </div>
 
-                    <!-- userlist -->
+                    <!-- userlist   aggiungo il ciclo v-for per stampare gli utenti  -->
 
-                    <div class="contact-list d-flex flex-column bg-white">
-                        <div class="sing-user d-flex p-3">
-                            <img class="global-user" src="./immagini/avatar_1.jpg" alt="Me">
+                    <div class="contact-list d-flex flex-column bg-white" >
+                        <div class="sing-user d-flex p-3" v-for="singleContact in contatti">
+                            <img class="global-user" :src=" `./immagini/avatar${singleContact.avatar}.jpg `">
                             <div class="ps-3">
-                                <span class="ps-1 fs-4 fw-normal">Sofia</span><br>
+                                <span class="ps-1 fs-4 fw-normal"> {{singleContact.name}}</span><br>
                                 <span class="last-mex">Ultimo messaggio inviato</span>
                             </div>
-                        </div>      
+                        </div>
                     </div>
                 </div>
 
-                    
+
 
                 <div class="message-container d-flex flex-column">
 
@@ -83,7 +83,7 @@
 
                     <div class="sing-user color-top-bar p-2 d-flex align-items-center border-start mb-5">
                         <div class="owner flex-grow-0">
-                            <img class="global-user" src="./immagini/avatar_io.jpg" alt="Me">                            
+                            <img class="global-user" src="./immagini/avatar_io.jpg" alt="Me">
                         </div>
                         <div class="flex-grow-1">
                             <div class="ps-2">
@@ -113,9 +113,6 @@
                         <div class="dest-mex">
                             <p>tutto fatto</p>
                         </div>
-                        
-
-                        </p>
                     </div>
 
                     <!-- input text user -->
@@ -136,11 +133,11 @@
                 </div>
             </div>
         </main>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
             integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
             crossorigin="anonymous"></script>
-        <script src="./js/main.js"></script>
-    </div>
+    <script src="./js/main.js"></script>
 
 </body>
 
