@@ -4,6 +4,10 @@
 
 body{
     background-color: rgb(215, 219, 214);
+}
+
+main{
+    height: 100vh;
     overflow: hidden;
 }
 
@@ -19,11 +23,11 @@ body{
     top: 40px;
     background-image: url(../immagini/mine.jpg);
     display: flex;
-    height: 100vh;
+    height: 100%;
 }
 
 .contact-list{
-    height: 75vh;
+    height: calc(100% - 290px);
     overflow: auto;
 }
 
@@ -33,12 +37,13 @@ body{
 
 .message-container{
     width: 60%;
+    height: 100%;
 }
 
-.message-body{
-    height: 80vh;
+.message-body {
+    overflow: auto;   
+    height: calc(100% - 290px);
 }
-
 
 
 .global-user{
@@ -92,4 +97,16 @@ body{
 
 .last-mex{
     color: rgb(187, 191, 196);
+}
+
+.mine-mex{
+    background-color: rgb(213, 249, 186);
+    padding: 1rem 7rem 1rem 1rem;
+    border-radius: 1rem;
+}
+
+.dest-mex{
+    background-color: white;
+    padding: 1rem 15rem 1rem 1rem;
+    border-radius: 1rem;
 }
