@@ -35,6 +35,10 @@ body{
     width: 60%;
 }
 
+.message-body{
+    height: 80vh;
+}
+
 
 
 .global-user{
