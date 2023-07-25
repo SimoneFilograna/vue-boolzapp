@@ -13,6 +13,13 @@ createApp({
                 status: "sent",
             },
 
+            answerMex: {
+                date: "",
+                message: "Non ti rispondo perchè il gatto ha mangiato uno squalo nel cortile accanto",
+                status: "received",
+            },
+
+
             contatti: [
                 {
                     name: "Michele",
@@ -110,9 +117,24 @@ createApp({
             const newMex = {...this.myMessage};
             console.log(newMex)
             arrayToPush.push(newMex);
-            console.log(arrayToPush)
+            console.log(arrayToPush);
+
+            //creo un clone della risposta  
+            const NewAnsw = {...this.answerMex};
+
+            //imposto il timeout
+            setTimeout(function(){
+                arrayToPush.push(NewAnsw)
+            }, 1500)
             
-        }
+            //svuoto l'input
+            this.myMessage.message = ""
+            
+        },
+
+
+
+        
     },
 
     //imposto un beforeMount, in modo da adare un valore a userContact iniziale
