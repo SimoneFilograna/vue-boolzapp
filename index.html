@@ -18,122 +18,126 @@
     <div id="app">
         <main>
             <div class="green-div"></div>
-            <div class="container d-flex p-0">
+            <div class="container">
 
-                <div class="contact-container flex-column">
+                <div class="content-container">
+                    <div class="contact-container d-flex flex-column bg-white">
 
-                    <!-- owner -->
-
-                    <div class="user-container flex-grow-0 align-items-center">
-
-                        <div class="owner-bar color-top-bar p-2 d-flex align-items-center">
-                            <div class="owner flex-grow-1">
+                        <!-- owner -->
+    
+                        <div class="user-container align-items-center">
+    
+                            <div class="owner-bar color-top-bar p-2 d-flex align-items-center">
+                                <div class="owner flex-grow-1">
+                                    <img class="global-user" src="./immagini/avatar_io.jpg" alt="Me">
+                                    <span class="ps-1 fs-5">Sofia</span>
+                                </div>
+                                <div class="icon pe-2">
+                                    <i class="fa-solid fa-circle-notch"></i>
+                                    <i class="fa-solid fa-message"></i>
+                                    <i class="fa-solid fa-ellipsis-vertical"></i>
+                                </div>
+                            </div>
+                        </div>
+    
+                        <!-- blue bar -->
+    
+                        <div class="blue-bar fs-5 blu-bar d-flex align-items-center p-3 gap-3">
+                            <div class="d-flex justify-content-center align-items-center">
+                                <i class="fa-solid fa-bell-slash"></i>
+                            </div>
+                            <div>
+                                <span class="main-not">Ricevi notifiche di nuovi messaggi</span><br>
+                                <span class="alt-not"><a href="#0">Attiva notifiche desktop</a></span>
+                            </div>
+                        </div>
+    
+                        <!-- search bar -->
+    
+                        <div class="search-bar color-top-bar flex-grow-0">
+                            <div class="input-group flex-nowrap p-2">
+                                <span class="input-group-text px-4" id="addon-wrapping"><i
+                                        class="fa-solid fa-magnifying-glass"></i></span>
+                                <input type="text" class="form-control py-2" placeholder="Cerca o inizia una nuova chat"
+                                    aria-label="Username" aria-describedby="addon-wrapping">
+                            </div>
+                        </div>
+    
+                        <!-- userlist   aggiungo il ciclo v-for per stampare gli utenti  -->
+                        
+                        <div class="contact-list flex-grow-1 d-flex flex-column" >
+                            <div class="sing-user d-flex p-3" v-for="singleContact in contatti">
+                                <img class="global-user" :src=" `./immagini/avatar${singleContact.avatar}.jpg `">
+                                <div class="ps-3">
+                                    <span class="ps-1 fs-4 fw-normal"> {{singleContact.name}}</span><br>
+                                    <span class="last-mex">Ultimo messaggio inviato</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+    
+    
+    
+                    <div class="message-container d-flex flex-column">
+    
+                        <!-- top bar destination -->
+    
+                        <div class="sing-user color-top-bar p-2 d-flex align-items-center border-start mb-5">
+                            <div class="owner flex-grow-0">
                                 <img class="global-user" src="./immagini/avatar_io.jpg" alt="Me">
-                                <span class="ps-1 fs-5">Sofia</span>
+                            </div>
+                            <div class="flex-grow-1">
+                                <div class="ps-2">
+                                    <span class="fs-5">Michele</span><br>
+                                    <span class="last-mex">Ultimo messaggio oggi alle 12:00</span>
+                                </div>
                             </div>
                             <div class="icon pe-2">
-                                <i class="fa-solid fa-circle-notch"></i>
-                                <i class="fa-solid fa-message"></i>
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                                <i class="fa-solid fa-paperclip"></i>
                                 <i class="fa-solid fa-ellipsis-vertical"></i>
                             </div>
                         </div>
-                    </div>
-
-                    <!-- blue bar -->
-
-                    <div class="blue-bar fs-5 blu-bar d-flex align-items-center p-3 flex-grow-0">
-                        <div>
-                            <i class="fa-solid fa-bell-slash p-3 me-2"></i>
-                        </div>
-                        <div>
-                            <span class="main-not">Ricevi notifiche di nuovi messaggi</span><br>
-                            <span class="alt-not"><a href="#0">Attiva notifiche desktop</a></span>
-                        </div>
-                    </div>
-
-                    <!-- search bar -->
-
-                    <div class="search-bar color-top-bar flex-grow-0">
-                        <div class="input-group flex-nowrap p-2">
-                            <span class="input-group-text px-4" id="addon-wrapping"><i
-                                    class="fa-solid fa-magnifying-glass"></i></span>
-                            <input type="text" class="form-control py-2" placeholder="Cerca o inizia una nuova chat"
-                                aria-label="Username" aria-describedby="addon-wrapping">
-                        </div>
-                    </div>
-
-                    <!-- userlist   aggiungo il ciclo v-for per stampare gli utenti  -->
-
-                    <div class="contact-list d-flex flex-column bg-white" >
-                        <div class="sing-user d-flex p-3" v-for="singleContact in contatti">
-                            <img class="global-user" :src=" `./immagini/avatar${singleContact.avatar}.jpg `">
-                            <div class="ps-3">
-                                <span class="ps-1 fs-4 fw-normal"> {{singleContact.name}}</span><br>
-                                <span class="last-mex">Ultimo messaggio inviato</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-
-
-                <div class="message-container d-flex flex-column">
-
-                    <!-- top bar destination -->
-
-                    <div class="sing-user color-top-bar p-2 d-flex align-items-center border-start mb-5">
-                        <div class="owner flex-grow-0">
-                            <img class="global-user" src="./immagini/avatar_io.jpg" alt="Me">
-                        </div>
-                        <div class="flex-grow-1">
-                            <div class="ps-2">
-                                <span class="fs-5">Michele</span><br>
-                                <span class="last-mex">Ultimo messaggio oggi alle 12:00</span>
-                            </div>
-                        </div>
-                        <div class="icon pe-2">
-                            <i class="fa-solid fa-magnifying-glass"></i>
-                            <i class="fa-solid fa-paperclip"></i>
-                            <i class="fa-solid fa-ellipsis-vertical"></i>
-                        </div>
-                    </div>
-
-                    <!-- text-area -->
-
-                    <div class="message-body p-5">
+    
+                        <!-- text-area -->
+    
+                        <div class="message-body flex-grow-1 p-5 d-flex flex-column">
                         
-                        <div class="content-text-area d-flex flex-column">
-                            <div class="mine-mex" >
-                                <p>spam spam </p>
+                            <div class="single-mex">
+                                <p class="text-mex mine-mex">Hai portato a spasso il cane</p>
                             </div>
+                            
+                            <div class="single-mex">
+                                <p class="text-mex mine-mex">RIcordati di stendere i panni</p>
+                            </div>
+                            
+                            <div class="single-mex">
+                                <p class="text-mex dest-mex" >tutto fatto</p>
+                            </div>
+                            
+                        
+                        
+                        </div>
     
-                            <div class="mine-mex">
-                                <p>ricordati di stendere i panni</p>
-                            </div>
+                        <!-- input text user -->
     
-                            <div class="dest-mex">
-                                <p>tutto fatto</p>
+                        <div class="color-top-bar d-flex align-items-center flex-shrink-0 p-2">
+                            <div class="icon">
+                                <i class="fa-regular fa-face-smile px-4"></i>
+                            </div>
+                            <div class="input-group">
+                                <input type="text" class="form-control p-3" placeholder="Scrivi messaggio">
+                            </div>
+                            <div class="icon">
+                                <i class="fa-solid fa-microphone px-4"></i>
                             </div>
                         </div>
-
+    
+    
                     </div>
-
-                    <!-- input text user -->
-
-                    <div class="owner-bar color-top-bar d-flex align-items-center">
-                        <div class="icon">
-                            <i class="fa-regular fa-face-smile px-5"></i>
-                        </div>
-                        <div class="input-group">
-                            <input type="text" class="form-control p-3" placeholder="Scrivi messaggio">
-                        </div>
-                        <div class="icon">
-                            <i class="fa-solid fa-microphone px-5 "></i>
-                        </div>
-                    </div>
-
-
                 </div>
+
+                
             </div>
         </main>
     </div>
