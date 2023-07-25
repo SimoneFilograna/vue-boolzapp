@@ -64,14 +64,16 @@
                         </div>
     
                         <!-- userlist   aggiungo il ciclo v-for per stampare gli utenti  -->
+                        <!-- aggiungo evento click -->
                         
                         <div class="contact-list flex-grow-1 d-flex flex-column" >
-                            <div class="sing-user d-flex p-3" v-for="singleContact in contatti" @click="onClickUser(singleContact)">
-                                <img class="global-user" :src=" `./immagini/avatar${singleContact.avatar}.jpg `">
-                                <div class="ps-2">
-                                    <span class="ps-1 fs-5 fw-normal">{{singleContact.name}}</span><br>
-                                    <span class="last-mex"> Ultimo messaggio inviato</span>
-                                </div>
+                            <div class="sing-user d-flex p-3" v-for="singleContact in contatti" 
+                                @click="onClickUser(singleContact)">
+                                    <img class="global-user" :src=" `./immagini/avatar${singleContact.avatar}.jpg `">
+                                    <div class="ps-2">
+                                        <span class="ps-1 fs-5 fw-normal">{{singleContact.name}}</span><br>
+                                        <span class="last-mex"> Ultimo messaggio inviato</span>
+                                    </div>
                             </div>
                         </div>
                     </div>

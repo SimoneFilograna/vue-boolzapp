@@ -129,4 +129,6 @@ body{
     align-self: start;
 }
 
-
+.active{
+    background-color: var(--bar-color);
+}

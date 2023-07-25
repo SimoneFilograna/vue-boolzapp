@@ -111,9 +111,11 @@ createApp({
             console.log(this.userContact)
         },
 
-        //funziona che pusha il clone senza reattività all'interno dell'array
+        //funzione che pusha il clone senza reattività all'interno dell'array
 
         sendMessage(arrayToPush){
+
+            //pusho il clone dell'input per eliminare la reattività
             const newMex = {...this.myMessage};
             console.log(newMex)
             arrayToPush.push(newMex);
