@@ -86,7 +86,9 @@ createApp({
                     ],
                 },
             ]
-
-        }
+        }       
+    },
+    methods: {
+        
     }
 }).mount('#app')

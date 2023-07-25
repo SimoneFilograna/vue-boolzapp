@@ -42,7 +42,7 @@
     
                         <!-- blue bar -->
     
-                        <div class="blue-bar fs-5 blu-bar d-flex align-items-center p-3 gap-3">
+                        <div class="blue-bar fs-5 blue-bar-height d-flex align-items-center p-3 gap-3">
                             <div class="d-flex justify-content-center align-items-center">
                                 <i class="fa-solid fa-bell-slash"></i>
                             </div>
@@ -101,20 +101,20 @@
     
                         <!-- text-area -->
     
-                        <div class="message-body flex-grow-1 p-5 d-flex flex-column">
+                        <div class="message-body flex-grow-1 p-5 d-flex flex-column" v-for="singleContact in contatti">
                         
-                            <div class="single-mex">
-                                <p class="text-mex mine-mex">Hai portato a spasso il cane</p>
+                            <div class="single-mex" v-for="singleMex in singleContact.messages">
+                                <p class="text-mex mine-mex">{{singleMex.message}}</p>
                             </div>
                             
-                            <div class="single-mex">
+                            <!-- <div class="single-mex">
                                 <p class="text-mex mine-mex">RIcordati di stendere i panni</p>
                             </div>
                             
                             <div class="single-mex">
                                 <p class="text-mex dest-mex" >tutto fatto</p>
                             </div>
-                            
+                             -->
                         
                         
                         </div>
