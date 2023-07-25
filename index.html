@@ -102,6 +102,8 @@
                         <!-- text-area -->
     
                         <div class="message-body flex-grow-1 p-5 d-flex flex-column">
+
+                                <!-- operatore ternario per assegnare la classe css  -->
                         
                             <div class="single-mex" v-for="singleText in userContact.messages">
                                 <p class="text-mex" :class="singleText.status === 'sent' ? 'mine-mex' : 'dest-mex' ">{{singleText.message}}</p>
@@ -126,7 +128,9 @@
                                 <i class="fa-regular fa-face-smile px-4"></i>
                             </div>
                             <div class="input-group">
-                                <input type="text" class="form-control p-3" placeholder="Scrivi messaggio">
+                                <input type="text" v-model="myMessage.message" class="form-control p-3" 
+                                placeholder="Scrivi messaggio"
+                                @keyup.enter="sendMessage(userContact.messages)">
                             </div>
                             <div class="icon">
                                 <i class="fa-solid fa-microphone px-4"></i>
