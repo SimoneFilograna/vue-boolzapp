@@ -66,7 +66,7 @@
                         <!-- userlist   aggiungo il ciclo v-for per stampare gli utenti  -->
                         
                         <div class="contact-list flex-grow-1 d-flex flex-column" >
-                            <div class="sing-user d-flex p-3" v-for="singleContact in contatti">
+                            <div class="sing-user d-flex p-3" v-for="singleContact in contatti" @click="onClickUser(singleContact)">
                                 <img class="global-user" :src=" `./immagini/avatar${singleContact.avatar}.jpg `">
                                 <div class="ps-2">
                                     <span class="ps-1 fs-5 fw-normal">{{singleContact.name}}</span><br>
@@ -84,11 +84,11 @@
     
                         <div class="sing-user color-top-bar p-2 d-flex align-items-center border-start mb-5">
                             <div class="owner flex-grow-0">
-                                <img class="global-user" src="./immagini/avatar_io.jpg" alt="Me">
+                                <img class="global-user" :src=" `./immagini/avatar${userContact.avatar}.jpg `" alt="Me">
                             </div>
                             <div class="flex-grow-1">
                                 <div class="ps-2">
-                                    <span class="fs-5">Michele</span><br>
+                                    <span class="fs-5">{{userContact.name}}</span><br>
                                     <span class="last-mex">Ultimo messaggio oggi alle 12:00</span>
                                 </div>
                             </div>
@@ -101,10 +101,10 @@
     
                         <!-- text-area -->
     
-                        <div class="message-body flex-grow-1 p-5 d-flex flex-column" v-for="singleContact in contatti">
+                        <div class="message-body flex-grow-1 p-5 d-flex flex-column">
                         
-                            <div class="single-mex" v-for="singleMex in singleContact.messages">
-                                <p class="text-mex mine-mex">{{singleMex.message}}</p>
+                            <div class="single-mex" v-for="singleText in userContact.messages">
+                                <p class="text-mex">{{singleText.message}}</p>
                             </div>
                             
                             <!-- <div class="single-mex">
@@ -113,8 +113,8 @@
                             
                             <div class="single-mex">
                                 <p class="text-mex dest-mex" >tutto fatto</p>
-                            </div>
-                             -->
+                            </div> -->
+                            
                         
                         
                         </div>

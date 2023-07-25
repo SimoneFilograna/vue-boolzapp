@@ -5,6 +5,8 @@ const { createApp } = Vue
 createApp({
     data() {
         return {
+            userContact: null,
+
             contatti: [
                 {
                     name: "Michele",
@@ -89,6 +91,16 @@ createApp({
         }       
     },
     methods: {
-        
+
+        //funzione che permette di selezionare ogni singolo user all'interno della lista
+        onClickUser(singleContact){
+            this.userContact = singleContact
+            console.log(this.userContact)
+        }
+    },
+
+    //imposto un beforeMount, in modo da adare un valore a userContact iniziale
+    beforeMount() {
+        this.userContact = this.contatti[0]
     }
 }).mount('#app')
