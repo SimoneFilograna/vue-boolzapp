@@ -104,7 +104,7 @@
                         <div class="message-body flex-grow-1 p-5 d-flex flex-column">
                         
                             <div class="single-mex" v-for="singleText in userContact.messages">
-                                <p class="text-mex">{{singleText.message}}</p>
+                                <p class="text-mex" :class="singleText.status === 'sent' ? 'mine-mex' : 'dest-mex' ">{{singleText.message}}</p>
                             </div>
                             
                             <!-- <div class="single-mex">
