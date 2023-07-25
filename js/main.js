@@ -7,6 +7,12 @@ createApp({
         return {
             userContact: null,
 
+            myMessage: {
+                date: "",
+                message: "",
+                status: "sent",
+            },
+
             contatti: [
                 {
                     name: "Michele",
@@ -96,6 +102,16 @@ createApp({
         onClickUser(singleContact){
             this.userContact = singleContact
             console.log(this.userContact)
+        },
+
+        //funziona che pusha il clone senza reattività all'interno dell'array
+
+        sendMessage(arrayToPush){
+            const newMex = {...this.myMessage};
+            console.log(newMex)
+            arrayToPush.push(newMex);
+            console.log(arrayToPush)
+            
         }
     },
 
