@@ -21,7 +21,6 @@ createApp({
                 status: "received",
             },
 
-
             contatti: [
                 {
                     name: "Michele",

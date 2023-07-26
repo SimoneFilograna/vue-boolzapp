@@ -73,7 +73,7 @@
                                     <img class="global-user" :src=" `./immagini/avatar${singleContact.avatar}.jpg `">
                                     <div class="ps-2 flex-grow-1" >
                                         <span class="ps-1 fs-5 fw-normal">{{singleContact.name}}</span><br>
-                                        <span class="last-mex"> Ultimo messaggio inviato</span>
+                                        <span class="last-mex"> {{singleContact.messages[singleContact.messages.length - 1].message}}</span>
                                     </div>
                                     <div class="time-mex">
                                         <small>12.00</small>
