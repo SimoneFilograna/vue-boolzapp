@@ -114,7 +114,7 @@
                         
                             <div class="single-mex" v-for="singleText in userContact.messages">
                                 <div class="text-mex" :class="singleText.status === 'sent' ? 'mine-mex' : 'dest-mex' ">
-                                    <p>{{singleText.message}}</p>
+                                    <span class="p-1">{{singleText.message}}</span>
                                     <small class="time-text-area">12.00</small>
                                 </div>
                             </div>
