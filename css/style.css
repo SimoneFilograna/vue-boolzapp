@@ -105,20 +105,27 @@ body{
 }
 
 .text-mex{
-    display: inline-block;
+    align-items: baseline;
+    display: flex;
     padding: .6rem;
+    margin-bottom: 1rem;
     border-radius: 8px;
     min-width: 300px;
     word-break: break-all;
     max-width: 80%;
+    position: relative;
+}
+
+.time-text-area{
+    position: absolute;
+    right: 10px;
+    bottom: 0;
 }
 
 .single-mex{
     display: flex;
     flex-direction: column;
 }
-
-
 
 .mine-mex{
     background-color: rgb(213, 249, 186);

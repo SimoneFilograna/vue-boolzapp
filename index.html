@@ -113,7 +113,10 @@
                                 <!-- operatore ternario per assegnare la classe css  -->
                         
                             <div class="single-mex" v-for="singleText in userContact.messages">
-                                <p class="text-mex" :class="singleText.status === 'sent' ? 'mine-mex' : 'dest-mex' ">{{singleText.message}}</p>
+                                <div class="text-mex" :class="singleText.status === 'sent' ? 'mine-mex' : 'dest-mex' ">
+                                    <p>{{singleText.message}}</p>
+                                    <small class="time-text-area">12.00</small>
+                                </div>
                             </div>
                             
                             <!-- <div class="single-mex">
