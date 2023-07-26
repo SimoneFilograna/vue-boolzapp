@@ -136,17 +136,17 @@ createApp({
         },  
     },
 
-
-    //imposto un beforeMount, in modo da adare un valore a userContact iniziale
-    beforeMount() {
-        this.userContact = this.contatti[0]
-    },
-
     computed: {
         filteredContact(){
             return this.contatti.filter(singleContact => singleContact.name.toLowerCase().includes(this.searchUser.toLowerCase()))
             
         }
     },
+
+    //imposto un beforeMount, in modo da adare un valore a userContact iniziale
+    beforeMount() {
+        this.userContact = this.contatti[0]
+    },
+
 
 }).mount('#app')
