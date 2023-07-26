@@ -67,7 +67,7 @@
                         <!-- aggiungo evento click -->
                         
                         <div class="contact-list flex-grow-1 d-flex flex-column" >
-                            <div class="sing-user d-flex p-3" v-for="singleContact in contatti"
+                            <div class="sing-user d-flex p-3" v-for="singleContact in filteredContact"
                                 @click="onClickUser(singleContact)">
                                     <img class="global-user" :src=" `./immagini/avatar${singleContact.avatar}.jpg `">
                                     <div class="ps-2">
