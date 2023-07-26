@@ -136,6 +136,7 @@ createApp({
         },  
     },
 
+    //utilizzo il computed per agire sugli elementi reattivi della lista con filtri in tempo reale
     computed: {
         filteredContact(){
             return this.contatti.filter(singleContact => singleContact.name.toLowerCase().includes(this.searchUser.toLowerCase()))
