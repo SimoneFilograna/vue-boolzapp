@@ -7,6 +7,8 @@ createApp({
         return {
             userContact: null,
 
+            searchUser: "",
+
             myMessage: {
                 date: "",
                 message: "",
@@ -130,17 +132,21 @@ createApp({
             }, 1500)
             
             //svuoto l'input
-            this.myMessage.message = ""
-            
-        },
-
-
-
-        
+            this.myMessage.message = ""  
+        },  
     },
+
 
     //imposto un beforeMount, in modo da adare un valore a userContact iniziale
     beforeMount() {
         this.userContact = this.contatti[0]
-    }
+    },
+
+    computed: {
+        filteredContact(){
+            return this.contatti.filter(singleContact => singleContact.name.toLowerCase().includes(this.searchUser.toLowerCase()))
+            
+        }
+    },
+
 }).mount('#app')

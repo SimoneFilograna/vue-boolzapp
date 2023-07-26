@@ -59,7 +59,7 @@
                                 <span class="input-group-text px-4" id="addon-wrapping"><i
                                         class="fa-solid fa-magnifying-glass"></i></span>
                                 <input type="text" class="form-control py-2" placeholder="Cerca o inizia una nuova chat"
-                                    aria-label="Username" aria-describedby="addon-wrapping">
+                                    aria-label="Username" aria-describedby="addon-wrapping" v-model="searchUser">
                             </div>
                         </div>
     
@@ -67,7 +67,7 @@
                         <!-- aggiungo evento click -->
                         
                         <div class="contact-list flex-grow-1 d-flex flex-column" >
-                            <div class="sing-user d-flex p-3" v-for="singleContact in contatti" 
+                            <div class="sing-user d-flex p-3" v-for="singleContact in contatti"
                                 @click="onClickUser(singleContact)">
                                     <img class="global-user" :src=" `./immagini/avatar${singleContact.avatar}.jpg `">
                                     <div class="ps-2">
