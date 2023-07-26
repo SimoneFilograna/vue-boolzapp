@@ -43,7 +43,7 @@
                         <!-- blue bar -->
     
                         <div class="blue-bar fs-5 blue-bar-height d-flex align-items-center p-3 gap-3">
-                            <div class="d-flex justify-content-center align-items-center">
+                            <div class="d-flex">
                                 <i class="fa-solid fa-bell-slash"></i>
                             </div>
                             <div>
@@ -114,8 +114,8 @@
                         
                             <div class="single-mex" v-for="singleText in userContact.messages">
                                 <div class="text-mex" :class="singleText.status === 'sent' ? 'mine-mex' : 'dest-mex' ">
-                                    <span class="p-1">{{singleText.message}}</span>
-                                    <small class="time-text-area">12.00</small>
+                                    <p>{{singleText.message}}</p>
+                                    <small class="time-text-area">{{singleText.date}}</small>
                                 </div>
                             </div>
                             
