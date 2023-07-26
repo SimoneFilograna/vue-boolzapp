@@ -135,6 +135,6 @@ body{
     align-self: start;
 }
 
-.active{
+.sing-user:active{
     background-color: var(--bar-color);
 }
