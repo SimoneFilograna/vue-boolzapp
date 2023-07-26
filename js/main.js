@@ -139,7 +139,6 @@ createApp({
     computed: {
         filteredContact(){
             return this.contatti.filter(singleContact => singleContact.name.toLowerCase().includes(this.searchUser.toLowerCase()))
-            
         }
     },
 
