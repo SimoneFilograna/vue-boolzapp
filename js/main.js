@@ -123,11 +123,11 @@ createApp({
             console.log(arrayToPush);
 
             //creo un clone della risposta  
-            const NewAnsw = {...this.answerMex};
+            const newAnsw = {...this.answerMex};
 
             //imposto il timeout
             setTimeout(function(){
-                arrayToPush.push(NewAnsw)
+                arrayToPush.push(newAnsw)
             }, 1500)
             
             //svuoto l'input
