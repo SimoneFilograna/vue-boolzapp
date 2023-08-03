@@ -116,10 +116,13 @@ createApp({
 
         sendMessage(arrayToPush){
 
-            //pusho il clone dell'input per eliminare la reattività           
+            //controllo che non ci siano spazi o che il testo non sia vuoto
+            
             if(this.myMessage.message === "" || this.myMessage.message.includes(" ")){
                 alert("Non puoi inviare questo messaggio")
             } else {
+
+            //pusho il clone dell'input per eliminare la reattività   
                 const newMex = {...this.myMessage};
                 arrayToPush.push(newMex);
                 console.log(arrayToPush);
