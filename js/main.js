@@ -17,7 +17,7 @@ createApp({
 
             answerMex: {
                 date: "",
-                message: "Non ti rispondo perchè il gatto ha mangiato uno squalo nel cortile accanto",
+                message: "",
                 status: "received",
             },
 
@@ -127,8 +127,17 @@ createApp({
                 arrayToPush.push(newMex);
                 console.log(arrayToPush);
 
-                //creo un clone della risposta  
+                //creo un clone della risposta
                 const newAnsw = {...this.answerMex};
+
+            //utilizzo axios per ottenere una risposta automatica tramite una API che genera risposte random
+
+                axios
+                .get("https://api.quotable.io/random")
+                .then(response => {
+                    newAnsw.message = response.data.content                        
+                })
+
 
             //imposto il timeout
                 setTimeout(function(){
