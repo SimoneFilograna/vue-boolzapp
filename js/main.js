@@ -116,22 +116,27 @@ createApp({
 
         sendMessage(arrayToPush){
 
-            //pusho il clone dell'input per eliminare la reattività
-            const newMex = {...this.myMessage};
-            console.log(newMex)
-            arrayToPush.push(newMex);
-            console.log(arrayToPush);
+            //pusho il clone dell'input per eliminare la reattività           
+            if(this.myMessage.message === "" || this.myMessage.message.includes(" ")){
+                alert("Non puoi inviare questo messaggio")
+            } else {
+                const newMex = {...this.myMessage};
+                arrayToPush.push(newMex);
+                console.log(arrayToPush);
 
-            //creo un clone della risposta  
-            const newAnsw = {...this.answerMex};
+                //creo un clone della risposta  
+                const newAnsw = {...this.answerMex};
 
             //imposto il timeout
-            setTimeout(function(){
-                arrayToPush.push(newAnsw)
-            }, 1500)
+                setTimeout(function(){
+                    arrayToPush.push(newAnsw)
+                }, 1500)
             
             //svuoto l'input
-            this.myMessage.message = ""  
+                this.myMessage.message = ""  
+            }
+
+            
         },  
     },
 
