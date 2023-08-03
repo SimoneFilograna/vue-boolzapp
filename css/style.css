@@ -104,7 +104,7 @@ body{
     white-space: nowrap; 
     overflow: hidden;
     text-overflow: ellipsis; 
-    max-width: 370px;
+    max-width: 350px;
 }
 
 .last-mex{
