@@ -118,7 +118,7 @@ createApp({
 
             //controllo che non ci siano spazi o che il testo non sia vuoto
             
-            if(this.myMessage.message === "" || this.myMessage.message.includes(" ")){
+            if(this.myMessage.message === "" || this.myMessage.message.includes("  ")){
                 alert("Non puoi inviare questo messaggio")
             } else {
 
