@@ -72,7 +72,7 @@
                             <div class="sing-user d-flex p-3" v-for="singleContact in filteredContact"
                                 @click="onClickUser(singleContact)">
                                     <img class="global-user" :src=" `./immagini/avatar${singleContact.avatar}.jpg `">
-                                    <div class="ps-2 flex-grow-1" >
+                                    <div class="ps-2 flex-grow-1 side-text-area" >
                                         <span class="ps-1 fs-5 fw-normal">{{singleContact.name}}</span><br>
                                         <span class="last-mex"> {{singleContact.messages[singleContact.messages.length - 1].message}}</span>
                                     </div>
