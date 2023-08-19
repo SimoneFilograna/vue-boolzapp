@@ -12,6 +12,7 @@
         integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
     <link rel="stylesheet" href="./css/style.css">
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dayjs/1.11.9/dayjs.min.js" integrity="sha512-q4Xn+ZU2K+dqJPL8a3TiyGsDa31IkR/rLt/w+fy8jLrx8TdXj0dLM1Aq4aPXnOOKxHEya/bD9DePDB2DHm4jJQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 </head>
 
@@ -116,7 +117,7 @@
                             <div class="single-mex" v-for="singleText in userContact.messages">
                                 <div class="text-mex" :class="singleText.status === 'sent' ? 'mine-mex' : 'dest-mex' ">
                                     <p>{{singleText.message}}</p>
-                                    <small class="time-text-area">12.00</small>
+                                    <small class="time-text-area">{{singleText.date}}</small>
                                 </div>
                             </div>
                             

@@ -124,6 +124,7 @@ createApp({
 
             //pusho il clone dell'input per eliminare la reattività   
                 const newMex = {...this.myMessage};
+                newMex.date = this.actualDate();
                 arrayToPush.push(newMex);
                 console.log(arrayToPush);
 
@@ -138,6 +139,9 @@ createApp({
                     newAnsw.message = response.data.content                        
                 })
 
+                newAnsw.date = this.actualDate()
+                console.log(newAnsw.date)
+
 
             //imposto il timeout
                 setTimeout(function(){
@@ -149,7 +153,11 @@ createApp({
             }
 
             
-        },  
+        },
+        
+        actualDate(){
+            return dayjs().format('HH:mm')
+        }
     },
 
     //utilizzo il computed per agire sugli elementi reattivi della lista con filtri in tempo reale
